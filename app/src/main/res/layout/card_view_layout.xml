@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tag="cards_container">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="20dp"
+        card_view:cardElevation="10dp"
+        card_view:contentPadding="20dp"
+        android:id="@+id/cardView"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCardName"
+                android:textColor="@color/teal_200"
+                android:textSize="24sp"
+                android:text="Example Card Name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/monteserrat_semibold"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txtDetailsSum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Trip details"
+                        android:textColor="@color/gray_text"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/monteserrat_medium"/>
+
+                    <TextView
+                        android:id="@+id/txtDistanceSum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="distance"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/monteserrat_light"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtAvSpeedSum"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="avg. speed"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/monteserrat_light"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTimeSum"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="time"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/monteserrat_light"/>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
